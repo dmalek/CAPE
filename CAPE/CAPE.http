@@ -1,0 +1,6 @@
+@CAPE_HostAddress = http://localhost:5215
+
+GET {{CAPE_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
