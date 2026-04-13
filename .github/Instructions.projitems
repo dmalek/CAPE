@@ -10,6 +10,7 @@
   </PropertyGroup>
   <ItemGroup>
     <None Include="$(MSBuildThisFileDirectory)copilot-instructions.md" />
+    <None Include="$(MSBuildThisFileDirectory)plans\CAPE-0 template.md" />
     <None Include="$(MSBuildThisFileDirectory)plans\CAPE-3 globalna obrada grešaka.md" />
     <None Include="$(MSBuildThisFileDirectory)plans\CAPE-2 implementacija swaggera.md" />
     <None Include="$(MSBuildThisFileDirectory)plans\CAPE-1 setup data context.md" />
