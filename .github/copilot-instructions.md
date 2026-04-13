@@ -26,6 +26,7 @@ CAPE/
 │           ├── AddTodoRequest.cs
 │           ├── AddTodoResponse.cs
 │           └── AddTodoEndpoint.cs
+├── Middleware/                 # Middleware sloj / globalni handleri
 ├── Program.cs                  # Konfiguracija aplikacije
 └── appsettings*.json           # Konfiguracija okruženja
 ```
@@ -33,8 +34,9 @@ CAPE/
 ### Konvencije
 - **Organizacija endpointova**: `Endpoints/<Modul>/<Akcija>/`
 - **Naming**: `<Akcija><Entitet>Request.cs`, `<Akcija><Entitet>Response.cs`, `<Akcija><Entitet>Endpoint.cs`
-- **Registriranje endpointova**: Svi endpointovi se registriraju u `Program.cs` unutar `Map endpoints` sekcije.
+- **Registriranje endpointova**: Svi endpointovi se registriraju u `Program.cs` unutar `Endpoints` sekcije.
 - **DbContext**: Koristit ću `AppDbContext` sa konfiguriranim modelima
+    - **Middleware**: Svi globalni middleware-i se registriraju u `Program.cs` unutar `Middlewares` sekcije.
 ---
 
 ## 2. Opća načela

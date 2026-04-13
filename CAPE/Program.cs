@@ -15,6 +15,9 @@ builder.Services.AddOpenApi();
 
 var app = builder.Build();
 
+// Middlewares
+
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
@@ -22,10 +25,9 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
 app.UseAuthorization();
 
-// Map endpoints
+// Endpoints
 app.MapAddTodo();
 
 app.Run();
