@@ -1,3 +1,4 @@
 <Solution>
+  <Project Path=".github/Instructions.shproj" Id="5e75bad5-ceb5-4bb5-ad8c-0b6a65d5628f" />
   <Project Path="CAPE/CAPE.csproj" />
 </Solution>
