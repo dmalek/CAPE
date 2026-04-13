@@ -1,4 +1,5 @@
 using CAPE.Context;
+using CAPE.Endpoints.Todo.Add;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -24,6 +25,7 @@ app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
-app.MapControllers();
+// Map endpoints
+app.MapAddTodo();
 
 app.Run();

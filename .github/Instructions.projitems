@@ -12,4 +12,7 @@
     <None Include="$(MSBuildThisFileDirectory)copilot-instructions.md" />
     <None Include="$(MSBuildThisFileDirectory)plans\CAPE-1 setup data context.md" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)workflows\" />
+  </ItemGroup>
 </Project>

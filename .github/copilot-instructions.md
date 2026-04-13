@@ -5,7 +5,39 @@ Copilot ih mora tretirati kao obvezne.
 
 ---
 
-## 1. Opća načela
+## 1. Arhitektura CAPE Aplikacije
+
+### Tehnološki stack
+- **Framework**: ASP.NET Core (Minimal APIs)
+- **ORM**: Entity Framework Core sa in-memory bazom podataka (`CAPE_DB`)
+- **Baza**: In-Memory Database (za razvoj)
+- **Jezik**: C# 14.0
+- **Target**: .NET 10
+
+### Projektna struktura
+```
+CAPE/
+├── Context/                    # Data access sloj (EF Core)
+│   ├── Models/                 # Entiteti
+│   └── AppDbContext.cs         # DbContext
+├── Endpoints/                  # API endpointovi
+│   └── Todo/                   # Modul: Todo zadaci
+│       └── Add/                # Akcija: Dodavanje
+│           ├── AddTodoRequest.cs
+│           ├── AddTodoResponse.cs
+│           └── AddTodoEndpoint.cs
+├── Program.cs                  # Konfiguracija aplikacije
+└── appsettings*.json           # Konfiguracija okruženja
+```
+
+### Konvencije
+- **Organizacija endpointova**: `Endpoints/<Modul>/<Akcija>/`
+- **Naming**: `<Akcija><Entitet>Request.cs`, `<Akcija><Entitet>Response.cs`, `<Akcija><Entitet>Endpoint.cs`
+- **Registriranje endpointova**: Svi endpointovi se registriraju u `Program.cs` unutar `Map endpoints` sekcije.
+- **DbContext**: Koristit ću `AppDbContext` sa konfiguriranim modelima
+---
+
+## 2. Opća načela
 
 - Ispravnost i sigurnost imaju prednost nad brzinom.
 - Ne pretpostavljaj — ako nešto nije jasno, postavi pitanje.
@@ -13,7 +45,7 @@ Copilot ih mora tretirati kao obvezne.
 
 ---
 
-## 2. Radni proces
+## 3. Radni proces
 
 Prije generiranja koda Copilot MORA:
 1. Pogledati relevantne datoteke u `/plans`.
@@ -26,7 +58,7 @@ Faze se ne smiju preskakati.
 
 ---
 
-## 3. Upravljanje zadacima
+## 4. Upravljanje zadacima
 
 Zadaci se nalaze u markdown datotekama unutar `/plans`.
 
@@ -37,7 +69,7 @@ Statusi: `TODO` | `IN_PROGRESS` | `DONE`
 
 ---
 
-## 4. Protokol odobrenja
+## 5. Protokol odobrenja
 
 Copilot **ne smije** implementirati zadatak bez eksplicitnog odobrenja.
 
@@ -48,7 +80,7 @@ Bez odobrenja — stani i zatraži potvrdu.
 
 ---
 
-## 5. Kontrola opsega
+## 6. Kontrola opsega
 
 - Ne refaktoriraj nesrodne module.
 - Ne preimenovuj datoteke bez zahtjeva.
@@ -58,7 +90,7 @@ Ako zadatak zahtijeva šire promjene — objasni utjecaj i zatraži odobrenje.
 
 ---
 
-## 6. Generiranje koda
+## 7. Generiranje koda
 
 - Prati postojeće konvencije imenovanja.
 - Drži kod jednostavnim i čitljivim.
@@ -66,7 +98,7 @@ Ako zadatak zahtijeva šire promjene — objasni utjecaj i zatraži odobrenje.
 
 ---
 
-## 7. Sigurnosna pravila
+## 8. Sigurnosna pravila
 
 Copilot **ne smije**:
 - brisati veće dijelove koda
@@ -78,11 +110,12 @@ Ako je promjena rizična — stani i pitaj.
 
 ---
 
-## 8. Stil odgovora
+## 9. Stil odgovora
 
 Svaki Copilotov odgovor treba:
-1. Kratko objasniti pristup.
-2. Predložiti rješenje.
-3. Pričekati odobrenje prije implementacije.
+1. Odgovaraj na hrvatskom jeziku.
+2. Kratko objasniti pristup.
+3. Predložiti rješenje.
+4. Pričekati odobrenje prije implementacije.
 
 ---
