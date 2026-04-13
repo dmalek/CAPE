@@ -1,5 +1,10 @@
 # Plan: Feature — postaviti data context i modele podataka
 
+Name: Setup Data Context and Models  
+Module: Context  
+Status: DONE  
+Created: 13.4.2026.
+
 ## Cilj
 Kreirati osnovne modele podataka i postaviti data context prem diagramu
 
@@ -25,8 +30,8 @@ erDiagram
 ```
 
 ## Scope
-- Dira: u folderu Context kreirati model TodoItem i ItemHistory, postaviti relaciju između njih. Kreirati dbContext i konfigurirati ga da koristi memory database.   
-- Ne dira: ne dirati ništa izvan foldera Context
+- Dozvoljeno: u folderu Context kreirati model TodoItem i ItemHistory, postaviti relaciju između njih. Kreirati dbContext i konfigurirati ga da koristi memory database.   
+- Nije dozvoljeno: ne dirati ništa izvan foldera Context
 
 ## Koraci
 1. Kreirati model TodoItem i ItemHistory, postaviti relaciju između njih
