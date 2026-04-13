@@ -26,7 +26,7 @@ CAPE/
 │           ├── AddTodoRequest.cs
 │           ├── AddTodoResponse.cs
 │           └── AddTodoEndpoint.cs
-├── Middleware/                 # Middleware sloj / globalni handleri
+├── Middlewares/                # Middleware sloj / globalni handleri
 ├── Program.cs                  # Konfiguracija aplikacije
 └── appsettings*.json           # Konfiguracija okruženja
 ```
