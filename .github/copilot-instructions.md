@@ -3,6 +3,14 @@
 Ove upute definiraju kako GitHub Copilot treba postupati u ovom projektu.
 Copilot ih mora tretirati kao obvezne.
 
+## Stil odgovora
+
+Svaki Copilotov odgovor treba:
+1. Odgovaraj na hrvatskom jeziku.
+2. Kratko objasniti pristup.
+3. Predložiti rješenje.
+4. Pričekati odobrenje prije implementacije.
+
 ---
 
 ## 1. Arhitektura CAPE Aplikacije
@@ -36,7 +44,7 @@ CAPE/
 - **Naming**: `<Akcija><Entitet>Request.cs`, `<Akcija><Entitet>Response.cs`, `<Akcija><Entitet>Endpoint.cs`
 - **Registriranje endpointova**: Svi endpointovi se registriraju u `Program.cs` unutar `Endpoints` sekcije.
 - **DbContext**: Koristit ću `AppDbContext` sa konfiguriranim modelima
-    - **Middleware**: Svi globalni middleware-i se registriraju u `Program.cs` unutar `Middlewares` sekcije.
+- **Middleware**: Svi globalni middleware-i se registriraju u `Program.cs` unutar `Middlewares` sekcije.
 ---
 
 ## 2. Opća načela
@@ -54,7 +62,7 @@ Prije generiranja koda Copilot MORA:
 2. Pročitati trenutni plan i status zadataka.
 
 Redoslijed rada:
-1. **Analiza** → 2. **Prijedlog** → 3. **Odobrenje** → 4. **Implementacija**
+1. **Analiza** → 2. **Prijedlog** → 3. **Odobrenje** → 4. **Implementacija** -> 5. **Dokumentacija**
 
 Faze se ne smiju preskakati.
 
@@ -112,12 +120,15 @@ Ako je promjena rizična — stani i pitaj.
 
 ---
 
-## 9. Stil odgovora
+## 9. Komentiranje koda
+- Komentiraj samo kompleksne dijelove koda.
+- Obavezno komentiraj klase, metode i endpointove s jasnim opisom funkcionalnosti.
 
-Svaki Copilotov odgovor treba:
-1. Odgovaraj na hrvatskom jeziku.
-2. Kratko objasniti pristup.
-3. Predložiti rješenje.
-4. Pričekati odobrenje prije implementacije.
+---
+
+## 10. Dokumentacija
+
+Copilot **treba**:
+- dokumentirati sve nove funkcionalnosti i promjene u planu zadataka pod sekcijom "Odrađene izmjene".
 
 ---

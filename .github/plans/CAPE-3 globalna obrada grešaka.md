@@ -1,7 +1,7 @@
 # Plan: Feature — globalna obrada grešaka
 
 Name: Exception Handling 
-Module: Middleware  
+Module: Middlewares  
 Status: TODO  
 Created: 13.4.2026.
 
@@ -22,6 +22,6 @@ Kreirati globalni middleware koji će hvatati i obrađivati sve iznimke koje se 
 - Obrada iznimki i vraćanje odgovarajućih HTTP odgovora je implementirana
 
 
-
-
+## Odrađene izmjene
+<!-- Ovdje će se bilježiti sve odrađene izmjene vezane uz ovaj zadatak, uključujući reference na commitove, pull requestove ili druge relevantne informacije. -->
 
